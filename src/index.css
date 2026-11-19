@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 10% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 18%;
+    --primary: 136 22% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 9 38% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 150 14% 94%;
+    --muted-foreground: 30 8% 40%;
+    --accent: 9 38% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 14% 88%;
+    --input: 150 14% 88%;
+    --ring: 136 22% 30%;
+    --radius: 0.75rem;
+    --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+    --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); }
+  .font-body { font-family: var(--font-body); }
+  .text-balance { text-wrap: balance; }
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .shadow-soft {
+    box-shadow: 0 10px 30px rgba(60, 88, 62, 0.08);
+  }
+  .shadow-luxe {
+    box-shadow: 0 20px 50px rgba(60, 88, 62, 0.12);
+  }
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-16 xl:px-24;
+  }
+}
